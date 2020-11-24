@@ -70,7 +70,7 @@
       
       <input type='button' value='Player 2'onclick='jogador2();'>
       <br>
-      <div id='reset'><input type='button' classe= 'reset' value='Reset'onclick='reset();'></div>
+      <input type='button' classe= 'reset' value='Reset'onclick='reset();'> | <input type='button' classe= 'trocar' value='Trocar'onclick='trocar();'>
            
     </div>
     
@@ -78,19 +78,27 @@
 
     <script type="text/javascript">
 
-  
-    function jogador1(){
+      
+    //Identificação  
+    equipe1 = prompt('Digite nome equipe 1:')  
+    document.getElementById('equipe1').value = equipe1;
 
+    equipe2 = prompt('Digite nome equipe 2:')  
+    document.getElementById('equipe2').value = equipe2;
+
+    //contador 1
+    function jogador1(){
     let n1 = parseInt(document.getElementById('placar1').value)  
       document.getElementById('placar1').value = n1 + 1
     }
 
+    //contador 2
     function jogador2(){
-    
     let n2 = parseInt(document.getElementById('placar2').value)  
       document.getElementById('placar2').value = n2 + 1 
     }
 
+    // reset
     function reset(){
       let n1 = parseInt(document.getElementById('placar1').value)
       let n2 = parseInt(document.getElementById('placar2').value)
@@ -98,9 +106,21 @@
       document.getElementById('placar2').value = n2 - n2
     }
 
-    // diminuir placar
-
     //troca de lado
+    function trocar() {
+    let equipe1 = document.getElementById('equipe1').value;
+    let equipe2 = document.getElementById('equipe2').value;
+    let n1 = parseInt(document.getElementById('placar1').value);
+    let n2 = parseInt(document.getElementById('placar2').value);
+
+    document.getElementById('equipe1').value = equipe2;
+    document.getElementById('equipe2').value = equipe1;
+    document.getElementById('placar1').value = n2;
+    document.getElementById('placar2').value = n1;
+    }
+
+    //contador de rodada
+
 
     </script>
     

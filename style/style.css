@@ -285,6 +285,14 @@ input[type=button]{
     top:30%;
 }
 
+/* #trocar{
+	position: absolute;
+	font-size: 40px;
+    left:20%;
+    top:30%;
+
+} */
+
 #menu{
 
     width:400px; /*Largura */
