@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <title>PLACAR</title>
+ 
+  <link rel="stylesheet" href="style/style.css">
+
+  </head>
+  
+  <body>
+
+    <div class="container">
+
+      <div class="rain">
+        <div class="drop"></div>
+        <div class="waves">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="splash"></div>
+        <div class="particles">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    
+      <div class="rain">
+        <div class="drop"></div>
+        <div class="waves">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="splash"></div>
+        <div class="particles">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    
+      <div class="rain">
+        <div class="drop"></div>
+        <div class="waves">
+          <div></div>
+          <div></div>
+        </div>
+        <div class="splash"></div>
+        <div class="particles">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    
+      
+    
+    </div>
+
+    <h2> Atividade Placar </h2>
+
+    <div id='menu'> 
+    
+      <input type='button' name='placar1' id='placar1' value='0'><input id="equipe1" type="text" value="" /> X <input id="equipe2" type="text" value="" /> <input type='button' name='placar2' id='placar2' value='0'>
+      <input type='button' value='Player 1'onclick='jogador1();'> | 
+      
+      <input type='button' value='Player 2'onclick='jogador2();'>
+      <br>
+      <div id='reset'><input type='button' classe= 'reset' value='Reset'onclick='reset();'></div>
+           
+    </div>
+    
+  
+
+    <script type="text/javascript">
+
+  
+    function jogador1(){
+
+    let n1 = parseInt(document.getElementById('placar1').value)  
+      document.getElementById('placar1').value = n1 + 1
+    }
+
+    function jogador2(){
+    
+    let n2 = parseInt(document.getElementById('placar2').value)  
+      document.getElementById('placar2').value = n2 + 1 
+    }
+
+    function reset(){
+      let n1 = parseInt(document.getElementById('placar1').value)
+      let n2 = parseInt(document.getElementById('placar2').value)
+      document.getElementById('placar1').value = n1 - n1
+      document.getElementById('placar2').value = n2 - n2
+    }
+
+    // diminuir placar
+
+    //troca de lado
+
+    </script>
+    
+  </body>
+</html>
