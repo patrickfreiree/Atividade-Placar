@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar</title>
+
+</head>
+
+<body>
+    <style TYPE="text/css">
+        div {
+            text-align: center;
+        }
+    </style>
+    <div>
+        <h1>Quilômetro por litro:</h1>
+       Diga a ditância percorrida:<input id="intDintancia" type="number" name="distanciaPercorrida" value="" size="50px"><br>
+       Diga a quantidade de gasolina:<input id="intGasolina" type="number" name="gasolina" value="" size="50px"><br>
+
+       <button button type="button" onclick="calcular()">Calcular</button>
+    </div>
+    <div id="saida">
+        <hr><b>CACULO:</b><br>
+    </div>
+    <script type="text/javascript">
+        // Questão 10.14
+
+        var distancia=[]
+        var gasolina=[]
+
+        var entDitancia= document.getElementById("intDintancia")
+        var entGasolina= document.getElementById("intGasolina")
+        
+
+        function calcular()
+        {
+
+            distancia[distancia.length]=entDitancia.value
+            gasolina[gasolina.length]=entGasolina.value
+
+            entDitancia.value=''
+            entGasolina.value=''
+
+            
+            atualizarPagina()
+        }
+
+        function atualizarPagina()
+        {
+            saida.innerHTML="<hr><b>CACULO:</b><br>"
+            for(i=0; i<distancia.length; i++)
+            {
+                var caculo=distancia[i]/gasolina[i]
+                saida.innerHTML += "<b><br>Distâcia: </b>" + distancia[i] + "/KM"
+                saida.innerHTML += "<b><br>Gasolina: </b>" + gasolina[i] + "/L"
+                saida.innerHTML += "<b><br>Caculo: </b>" + caculo.toFixed(3) + " KM/L"+"<br>"
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -248,12 +248,10 @@ body{
 	}
 }
  
-h2 {
+h1 {
     position: absolute;
     color: #5e8c94;
-    border-color: black;
-    font-size: 40px;
-    left:35%;
+    left:40%;
     top:15%;   
 }
 
@@ -272,10 +270,7 @@ input[type=button]{
     display: inline-block;
     font-size: 18px;
     margin: 2px 5px;
-	cursor: pointer;
-	
-		
-
+	cursor: pointer;	
 }
 
 #reset{
@@ -285,19 +280,20 @@ input[type=button]{
     top:30%;
 }
 
-/* #trocar{
+#trocar{
 	position: absolute;
 	font-size: 40px;
     left:20%;
-    top:30%;
-
-} */
+    top:30%;	
+}
 
 #menu{
 
-    width:400px; /*Largura */
-    height:400px; /*Altura*/
-    position: absolute;
+    width:310px; /*Largura */
+    height:170px; /*Altura*/
+	position: absolute;
+    background: rgba(255, 255, 255, 0.824);
+    color: rgb(0, 0, 0);
     top:40%;
     left:40%;
     /* right:50%; */
