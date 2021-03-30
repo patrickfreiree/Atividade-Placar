@@ -1,0 +1,25 @@
+
+//função para declarar, ou seja, pegando as informaçãoes do HTML p/ funcionar a function.
+ 
+function jogadoresNatela(jogadores){
+ //declarei html e atribui um valor
+  var html = '' 
+ //um laço de repetição para pegar os valores do html.
+  for(var i = 0; i < jogadores.length; i++){
+    //linhas <tr> bloco <td>
+    //forma 1 de escrever
+    html = html + "<tr><td>" + jogadores[i].nome + "</td>"
+    //forma 2 de escrever
+    html += "<td>" + jogadores[i].vitorias + "</td>"
+    html += "<td>" + jogadores[i].empates + "</td>"
+    html += "<td>" + jogadores[i].derrotas + "</td>"
+    html += "<td>" + jogadores[i].pontos + "</td>"
+    //agora fazendo os botões (o + i + é pasando nosso indici, o valor)
+    html += "<td><button onClick='adicionarVitoria(" + i + ")'>Vitória</button></td>"
+    html += "<td><button onClick='adicionarEmpate(" + i + ")'>Empate</button></td>"
+    html += "<td><button onClick='adicionarDerrota("+ i +")'>Derrota</button></td></tr>"
+  }
+  // pegando do HTML para imprimir no html, ou seja na página.
+  var tabelaJogadores = document.getElementById("tabelaJogadores")
+  tabelaJogadores.innerHTML = html
+}
